@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCP.Web", "SCP.Web\SCP.Web.csproj", "{D2BD3451-2D99-42CB-B209-B0D5D11A76DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCP.Web.Tests", "SCP.Web.Tests\SCP.Web.Tests.csproj", "{2AB1819B-D347-4CB9-B41A-CFCE0DDA8A47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCP", "SCP\SCP.csproj", "{F72C5421-1D4E-4A4F-B194-35FD2CA222DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2BD3451-2D99-42CB-B209-B0D5D11A76DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2BD3451-2D99-42CB-B209-B0D5D11A76DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2BD3451-2D99-42CB-B209-B0D5D11A76DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2BD3451-2D99-42CB-B209-B0D5D11A76DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AB1819B-D347-4CB9-B41A-CFCE0DDA8A47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AB1819B-D347-4CB9-B41A-CFCE0DDA8A47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AB1819B-D347-4CB9-B41A-CFCE0DDA8A47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AB1819B-D347-4CB9-B41A-CFCE0DDA8A47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F72C5421-1D4E-4A4F-B194-35FD2CA222DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F72C5421-1D4E-4A4F-B194-35FD2CA222DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F72C5421-1D4E-4A4F-B194-35FD2CA222DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F72C5421-1D4E-4A4F-B194-35FD2CA222DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

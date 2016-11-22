@@ -1,0 +1,64 @@
+﻿@model SCP.Web.Models.InputValidationModel
+@{
+    ViewBag.Title = "Good Examples";
+}
+
+<h3>Input Validation</h3>
+<hr />
+@using (Html.BeginForm("InputValidation", "Good", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-md-4">
+            Name
+        </div>
+        <div class="col-md-4">
+            : <input type="text" id="name" name="name" value="Faruk"/>
+            @Html.ValidationMessage("name", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            Age
+        </div>
+        <div class="col-md-4">
+            : <input type="text" id="age" name="age" value="36" />
+            @Html.ValidationMessage("age", new { @class = "text-danger" })
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-4">
+            Notes
+        </div>
+        <div class="col-md-4">
+            : <textarea id="notes" name="notes" class="text-info" rows="5">&lt;script&gt;window.location.replace('http://www.google.com');&lt;/script&gt;</textarea>
+            @Html.ValidationMessage("notes", new { @class = "text-danger" })
+        </div>
+    </div>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="row pull-right" style="margin-right: 10px;">
+        <input type="submit" value="send" class="btn btn-default" />
+    </div>
+    <br />
+    <div class="row">
+        <br />
+    </div>
+    <div class="panel panel-warning">
+        <div class="panel panel-heading panel-title">
+            Model
+        </div>
+        <div class="panel panel-body" style="margin: 5px;">
+            <div class="row">
+                Name @Html.Encode(Model.Name)
+            </div>
+            <div class="row">
+                Age @Html.Encode(Model.Age)
+            </div>
+            <div class="row">
+                Notes @Html.Raw(Server.HtmlEncode(Model.Notes))
+            </div>
+        </div>
+    </div>
+}

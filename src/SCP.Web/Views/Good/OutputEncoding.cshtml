@@ -1,0 +1,16 @@
+﻿@model SCP.Web.Models.OutputEncodingModel
+@{
+    ViewBag.Title = "Good Examples";
+}
+
+<h3>Output Encoding</h3>
+
+<div class="row" style="margin: 5px;">
+    <b>Subject:</b> @Html.Encode(Model.Subject)
+    <hr /> 
+    <b>Message:</b> @Html.Encode(Model.Message)
+    <hr />
+    <b>Path:</b> @Html.Encode(Model.Path)
+    <hr />
+    <b>Credit Card Number:</b> @Html.Encode(Model.CreditCardNumber)
+</div>
