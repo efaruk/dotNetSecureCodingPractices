@@ -4,7 +4,7 @@
 }
 
 <h3>Input Validation</h3>
-<hr />
+<hr/>
 @using (Html.BeginForm("InputValidation", "Bad", FormMethod.Get))
 {
     <div class="row">
@@ -12,7 +12,7 @@
             Name
         </div>
         <div class="col-md-4">
-            : <input type="text" id="name" name="name" value="Faruk" />
+            : <input type="text" id="name" name="name" value="Faruk"/>
         </div>
     </div>
     <div class="row">
@@ -20,7 +20,7 @@
             Age
         </div>
         <div class="col-md-4">
-            : <input type="text" id="age" name="age" value="36" />
+            : <input type="text" id="age" name="age" value="36"/>
         </div>
     </div>
     <div class="row">
@@ -31,28 +31,28 @@
             : <textarea id="notes" name="notes" class="text-info" rows="5">&lt;script&gt;window.location.replace('http://www.google.com');&lt;/script&gt;</textarea>
         </div>
     </div>
-    <hr />
+    <hr/>
     <div class="row pull-right" style="margin-right: 10px;">
-        <input type="submit" value="send" class="btn btn-default" />
-    </div>
-    <br />
-    <div class="row">
-        <br />
-    </div>
-    <div class="panel panel-warning">
-        <div class="panel panel-heading panel-title">
-            Model
-        </div>
-        <div class="panel panel-body" style="margin: 5px;">
-            <div class="row">
-                Name @Html.Raw(Model.Name)
-            </div>
-            <div class="row">
-                Age @Html.Raw(Model.Age)
-            </div>
-            <div class="row">
-                Notes @Html.Raw(Model.Notes)
-            </div>
-        </div>
+        <input type="submit" value="send" class="btn btn-default"/>
     </div>
 }
+<br/>
+<div class="row">
+    <br/>
+</div>
+<div class="panel panel-warning">
+    <div class="panel panel-heading panel-title">
+        Model
+    </div>
+    <div class="panel panel-body" style="margin: 5px;">
+        <div class="row">
+            Name @Html.Raw(Model.Name)
+        </div>
+        <div class="row">
+            Age @Html.Raw(Model.Age)
+        </div>
+        <div class="row">
+            Notes @Html.Raw(Model.Notes)
+        </div>
+    </div>
+</div>

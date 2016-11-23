@@ -12,6 +12,5 @@ namespace SCP.Web.Models
         public string Path { get; set; } = HttpRuntime.AppDomainAppPath;
 
         public string CreditCardNumber { get; set; } = "5311492130660972";
-
     }
 }

@@ -4,3 +4,11 @@
 
 <h3>Session Management</h3>
 
+<h5>Your Session Id: @Html.Raw(ViewData["session_id"])</h5>
+@using (Html.BeginForm("SessionManagementLogout", "Bad", FormMethod.Get))
+{
+    <div class="row pull-right" style="margin: 10px;">
+        <input type="hidden" id="logout" name="logout" value="true" />
+        <input type="submit" value="logout" />
+    </div>
+}

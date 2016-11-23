@@ -1,33 +1,33 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - .Net SCP</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink(".Net SCP", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                </ul>
-            </div>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink(".Net SCP", "Index", "Home", new {area = ""}, new {@class = "navbar-brand"})
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            </ul>
         </div>
     </div>
+</div>
 <div class="container body-content">
     <h2>.Net Secure Coding Practices</h2>
-    <hr />
+    <hr/>
     <div class="row">
         <div class="col-md-8">
             <div class="panel panel-default">
@@ -50,8 +50,7 @@
                                 <ul>
                                     <li>@Html.ActionLink("Input Validation", "InputValidation", "Bad")</li>
                                     <li>@Html.ActionLink("Output Encoding", "OutputEncoding", "Bad")</li>
-                                    <li>@Html.ActionLink("Authentication", "Authentication", "Bad")</li>
-                                    <li>@Html.ActionLink("Password Management", "PasswordManagement", "Bad")</li>
+                                    <li>@Html.ActionLink("Authentication and Password Management", "Authentication", "Bad")</li>
                                     <li>@Html.ActionLink("Session Management", "SessionManagement", "Bad")</li>
                                     <li>@Html.ActionLink("Access Control", "AccessControl", "Bad")</li>
                                     <li>@Html.ActionLink("Cryptographic Practices", "CryptographicPractices", "Bad")</li>
@@ -69,8 +68,7 @@
                                 <ul>
                                     <li>@Html.ActionLink("Input Validation", "InputValidation", "Good")</li>
                                     <li>@Html.ActionLink("Output Encoding", "OutputEncoding", "Good")</li>
-                                    <li>@Html.ActionLink("Authentication", "Authentication", "Good")</li>
-                                    <li>@Html.ActionLink("Password Management", "PasswordManagement", "Good")</li>
+                                    <li>@Html.ActionLink("Authentication and Password Management", "Authentication", "Good")</li>
                                     <li>@Html.ActionLink("Session Management", "SessionManagement", "Good")</li>
                                     <li>@Html.ActionLink("Access Control", "AccessControl", "Good")</li>
                                     <li>@Html.ActionLink("Cryptographic Practices", "CryptographicPractices", "Good")</li>
@@ -97,16 +95,26 @@
                             <li>
                                 <a href="https://www.pcisecuritystandards.org/" target="blank" title="Payment Card Industry - Security Standards Council">PCI SSC</a>
                                 <ul>
-                                    <li><a href="https://www.pcisecuritystandards.org/document_library" target="blank">Document Library</a></li>
+                                    <li>
+                                        <a href="https://www.pcisecuritystandards.org/document_library" target="blank">Document Library</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="https://www.owasp.org/" target="blank">OWASP</a>
                                 <ul>
-                                    <li><a href="https://www.owasp.org/index.php/OWASP_Secure_Coding_Practices_-_Quick_Reference_Guide" target="blank">SCP Quick Reference Guide</a></li>
-                                    <li><a href="https://www.owasp.org/index.php/OWASP_Top_Ten_Cheat_Sheet">Top Ten Cheat Sheet</a></li>
-                                    <li><a href="https://www.owasp.org/index.php/Category:OWASP_Java_Project" target="blank">Java Project</a></li>
-                                    <li><a href="https://www.owasp.org/index.php/.NET" target="blank">.Net Project</a></li>
+                                    <li>
+                                        <a href="https://www.owasp.org/index.php/OWASP_Secure_Coding_Practices_-_Quick_Reference_Guide" target="blank">SCP Quick Reference Guide</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.owasp.org/index.php/OWASP_Top_Ten_Cheat_Sheet">Top Ten Cheat Sheet</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.owasp.org/index.php/Category:OWASP_Java_Project" target="blank">Java Project</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.owasp.org/index.php/.NET" target="blank">.Net Project</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li>
@@ -129,8 +137,8 @@
     </footer>
 </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", false)
 </body>
 </html>

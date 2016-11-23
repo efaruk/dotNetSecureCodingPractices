@@ -1,8 +1,9 @@
-﻿@{
+﻿@model SCP.Data.Entities.User
+@{
     ViewBag.Title = "Bad Examples";
 }
 
-<h3>Authentication</h3>
+<h3>Authentication and Password Management</h3>
 
 @using (Html.BeginForm("Authentication", "Bad", FormMethod.Get))
 {
@@ -11,7 +12,7 @@
             User Name
         </div>
         <div class="col-md-4">
-            : <input type="text" id="username" name="username" value="admin" />
+            : <input type="text" id="username" name="username" value="admin"/>
         </div>
     </div>
     <div class="row">
@@ -19,12 +20,44 @@
             Password
         </div>
         <div class="col-md-4">
-            : <input type="text" id="password" name="password" value="123456" />
+            : <input type="text" id="password" name="password" value="123456"/>
         </div>
     </div>
-    <hr />
+    <hr/>
     <div class="row pull-right" style="margin-right: 10px;">
-        <input type="submit" value="send" class="btn btn-default" />
+        <input type="submit" value="send" class="btn btn-default"/>
     </div>
-    <br />
+    <br/>
 }
+<br/>
+<div class="row">
+    <br/>
+</div>
+<div class="panel panel-warning">
+    <div class="panel panel-heading panel-title">
+        User
+    </div>
+    <div class="panel panel-body" style="margin: 5px;">
+        <div class="row">
+            Id: @Html.Raw(Model.Id)
+        </div>
+        <div class="row">
+            Name: @Html.Raw(Model.Name)
+        </div>
+        <div class="row">
+            E-Mail: @Html.Raw(Model.EMail)
+        </div>
+        <div class="row">
+            User Name: @Html.Raw(Model.UserName)
+        </div>
+        <div class="row">
+            Password: @Html.Raw(Model.Password)
+        </div>
+        <div class="row">
+            Is Staf: @Html.Raw(Model.IsStaff)
+        </div>
+        <div class="row">
+            Is Admin: @Html.Raw(Model.IsAdmin)
+        </div>
+    </div>
+</div>

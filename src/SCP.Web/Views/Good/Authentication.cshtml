@@ -1,6 +1,64 @@
-﻿@{
+﻿@model SCP.Web.Models.AuthenticationViewModel
+@{
     ViewBag.Title = "Good Examples";
 }
 
-<h3>Authentication</h3>
+<h3>Authentication and Password Management</h3>
 
+@using (Html.BeginForm("Authentication", "Good", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-md-4">
+            User Name
+        </div>
+        <div class="col-md-4">
+            : <input type="text" id="username" name="username" value="sysadmin"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            Password
+        </div>
+        <div class="col-md-4">
+            : <input type="password" id="password" name="password" value="k%Z2h_8%Vx*dJQQ?" autocomplete="false" />
+        </div>
+    </div>
+    <hr/>
+    <div class="row pull-right" style="margin-right: 10px;">
+        <input type="submit" value="send" class="btn btn-default"/>
+    </div>
+    <br/>
+}
+<br/>
+<div class="row">
+    <br/>
+</div>
+<div class="panel panel-info">
+    <div class="panel panel-heading panel-title">
+        User
+    </div>
+    <div class="panel panel-body" style="margin: 5px;">
+        <div class="row">
+            Id: @Html.Encode(Model.IdHashed)
+        </div>
+        <div class="row">
+            Name: @Html.Encode(Model.Name)
+        </div>
+        <div class="row">
+            E-Mail: @Html.Encode(Model.EMail)
+        </div>
+        <div class="row">
+            User Name: N/A
+        </div>
+        <div class="row">
+            Password: N/A
+        </div>
+        <div class="row">
+            Is Staf: N/A
+        </div>
+        <div class="row">
+            Is Admin: N/A
+        </div>
+    </div>
+</div>

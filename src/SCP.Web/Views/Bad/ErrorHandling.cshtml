@@ -1,6 +1,20 @@
-﻿@{
+﻿@model Exception
+@{
     ViewBag.Title = "Bad Examples";
 }
 
 <h3>Error Handling</h3>
 
+<div class="panel panel-danger">
+    <div class="panel-heading panel-title">
+        Error: @Html.Raw(Model.GetType().ToString())
+    </div>
+    <div class="panel-body">
+        <div class="well">
+            <p><b>Exception</b> @Html.Raw(Model.Message)</p>
+        </div>
+        <div class="well-sm">
+            <p><b>Stack Trace</b> @Html.Raw(Model.StackTrace)</p>
+        </div>
+    </div>
+</div>

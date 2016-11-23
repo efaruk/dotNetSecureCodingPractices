@@ -7,7 +7,6 @@ namespace SCP.Web.Models
     {
         public InputValidationModel()
         {
-            
         }
 
         public InputValidationModel(string name, int age, string notes)
@@ -24,7 +23,7 @@ namespace SCP.Web.Models
 
         [Required]
         [Range(1, 200)]
-        public int Age { get; set; } = 0;
+        public int Age { get; set; }
 
         [Required(AllowEmptyStrings = false)]
         [MinLength(5)]
