@@ -177,6 +177,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Classic.asp" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -253,6 +254,7 @@
     <Content Include="Views\Good\OutputEncoding.cshtml" />
     <Content Include="Views\Good\SessionManagement.cshtml" />
     <Content Include="Views\Good\Index.cshtml" />
+    <Content Include="Views\Home\SystemConfiguration.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

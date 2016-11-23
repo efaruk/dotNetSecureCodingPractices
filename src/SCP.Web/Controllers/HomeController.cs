@@ -18,5 +18,10 @@ namespace SCP.Web.Controllers
         {
             return View();
         }
+
+        public ActionResult SystemConfiguration()
+        {
+            return View();
+        }
     }
 }
