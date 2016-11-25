@@ -175,20 +175,20 @@ namespace SCP.Web.Controllers
         [HttpPost]
         public ActionResult FileManagement(HttpPostedFileBase upload)
         {
-            if (ModelState.IsValid)
+            if (upload != null && upload.ContentLength > 0)
             {
-                if (upload != null && upload.ContentLength > 0)
-                {
-                    var fileName = Path.GetFileName(upload.FileName);
-                    var path = Path.Combine(Server.MapPath("~/App_Data/uploads"), fileName);
-                    upload.SaveAs(path);
-                }
+                var fileName = Path.GetFileName(upload.FileName);
+                var path = Path.Combine(Server.MapPath("~/uploads/"), fileName);
+                upload.SaveAs(path);
             }
             return View();
         }
 
         public ActionResult MemoryManagement()
         {
+            var fs = new FileInfo(Server.MapPath("~/App_Data/test.txt")).OpenRead();
+            var sr = new StreamReader(fs);
+            ViewData["data"] = sr.ReadToEnd();
             return View();
         }
     }

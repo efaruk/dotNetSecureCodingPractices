@@ -6,6 +6,7 @@ using System.Security.Cryptography;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using FileTypeDetective;
 using SCP.Configuration;
 using SCP.Data;
 using SCP.Data.Entities;
@@ -269,8 +270,18 @@ namespace SCP.Web.Controllers
                 if (upload != null && upload.ContentLength > 0)
                 {
                     var fileName = Guid.NewGuid() + "__" + Path.GetFileName(upload.FileName);
-                    var path = Path.Combine(Server.MapPath("~/App_Data/uploads"), fileName);
+                    var path = Path.Combine(Server.MapPath("~/App_Data/uploads/temp/"), fileName);
                     upload.SaveAs(path);
+                    var fi = new FileInfo(path);
+                    // Check File Hader (Magic Number)
+                    if (!fi.IsJpeg())
+                    {
+                        fi.Delete();
+                    }
+                    else
+                    {
+                        fi.MoveTo(Server.MapPath("~/App_Data/uploads/"));
+                    }
                 }
             }
             return View();
@@ -278,6 +289,15 @@ namespace SCP.Web.Controllers
 
         public ActionResult MemoryManagement()
         {
+            string data;
+            using (var fs = (new FileInfo(Server.MapPath("~/App_Data/test.txt")).OpenRead()))
+            {
+                using (var sr = new StreamReader(fs))
+                {
+                    data = sr.ReadToEnd();
+                }
+            }
+            ViewData["data"] = data;
             return View();
         }
     }
