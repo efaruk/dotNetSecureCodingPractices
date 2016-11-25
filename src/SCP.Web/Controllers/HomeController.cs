@@ -23,5 +23,10 @@ namespace SCP.Web.Controllers
         {
             return View();
         }
+
+        public ActionResult DatabaseSecurity()
+        {
+            return View();
+        }
     }
 }

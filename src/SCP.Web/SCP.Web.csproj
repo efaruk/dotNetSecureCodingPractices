@@ -56,12 +56,20 @@
       <HintPath>..\packages\Autofac.Mvc5.4.0.0\lib\net451\Autofac.Integration.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="DigitalTechnologies.RemoveHeaders, Version=1.0.0.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RemoveASPNETheaders.1.0.0.7\lib\net45\DigitalTechnologies.RemoveHeaders.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FileTypeDetective, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FileTypeDetective.1.0.0.0\lib\net40\FileTypeDetective.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
@@ -237,14 +245,12 @@
     <Content Include="Views\Bad\Logging.cshtml" />
     <Content Include="Views\Bad\DataProtection.cshtml" />
     <Content Include="Views\Bad\CommunicationSecurity.cshtml" />
-    <Content Include="Views\Bad\DatabaseSecurity.cshtml" />
     <Content Include="Views\Bad\FileManagement.cshtml" />
     <Content Include="Views\Bad\MemoryManagement.cshtml" />
     <Content Include="Views\Good\AccessControl.cshtml" />
     <Content Include="Views\Good\Authentication.cshtml" />
     <Content Include="Views\Good\CommunicationSecurity.cshtml" />
     <Content Include="Views\Good\CryptographicPractices.cshtml" />
-    <Content Include="Views\Good\DatabaseSecurity.cshtml" />
     <Content Include="Views\Good\DataProtection.cshtml" />
     <Content Include="Views\Good\ErrorHandling.cshtml" />
     <Content Include="Views\Good\FileManagement.cshtml" />
@@ -255,6 +261,7 @@
     <Content Include="Views\Good\SessionManagement.cshtml" />
     <Content Include="Views\Good\Index.cshtml" />
     <Content Include="Views\Home\SystemConfiguration.cshtml" />
+    <Content Include="Views\Home\DatabaseSecurity.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

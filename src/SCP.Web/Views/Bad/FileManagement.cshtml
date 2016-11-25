@@ -3,3 +3,18 @@
 }
 
 <h3>File Management</h3>
+
+@using (Html.BeginForm("FileManagement", "Bad", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="panel panel-default">
+        <div class="panel-heading panel-title">
+            File Upload
+        </div>
+        <div class="panel-body well">
+            Select A File: <input type="file" id="upload" name="upload" />
+        </div>
+        <div class="panel-footer pull-right" style="margin: 5px;">
+            <input type="submit" class="btn-default" value="Send" />
+        </div>
+    </div>
+}

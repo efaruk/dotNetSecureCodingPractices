@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 using System.Net.Configuration;
 using System.Security.Cryptography;
@@ -254,13 +255,24 @@ namespace SCP.Web.Controllers
             return View();
         }
 
-        public ActionResult DatabaseSecurity()
+        public ActionResult FileManagement()
         {
             return View();
         }
 
-        public ActionResult FileManagement()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult FileManagement(HttpPostedFileBase upload)
         {
+            if (ModelState.IsValid)
+            {
+                if (upload != null && upload.ContentLength > 0)
+                {
+                    var fileName = Guid.NewGuid() + "__" + Path.GetFileName(upload.FileName);
+                    var path = Path.Combine(Server.MapPath("~/App_Data/uploads"), fileName);
+                    upload.SaveAs(path);
+                }
+            }
             return View();
         }
 

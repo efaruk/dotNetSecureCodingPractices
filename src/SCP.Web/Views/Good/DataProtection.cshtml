@@ -3,3 +3,18 @@
 }
 
 <h3>Data Protection</h3>
+
+<h4>Good Practices</h4>
+<ul>
+    <li>Minimize/Seperate privileges/roles/users.</li>
+    <li>Create alarm on any administrative activity, even for login as root.</li>
+    <li>Prefer White-List approach.</li>
+    <li>Create data access objects which is defining only required assets.</li>
+    <li>Encrypt sensitive data and restrict access to decryption.</li>
+    <li>Protect server-side assets (code, configuration, system information, etc) from direct access (viewing, downloading, etc.)</li>
+    <li>Do NOT store any sensitive data on client side.</li>
+    <li>Do NOT Comment or Document any sensitive data in or out of the code.</li>
+    <li>Do NOT include any sensitive data on HTTP GET</li>
+    <li>Do NOT forget temps and cache's including client side.</li>
+    <li>Publish a Policy.</li>
+</ul>

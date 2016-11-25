@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -164,13 +166,24 @@ namespace SCP.Web.Controllers
             return View();
         }
 
-        public ActionResult DatabaseSecurity()
+        [HttpGet]
+        public ActionResult FileManagement()
         {
             return View();
         }
 
-        public ActionResult FileManagement()
+        [HttpPost]
+        public ActionResult FileManagement(HttpPostedFileBase upload)
         {
+            if (ModelState.IsValid)
+            {
+                if (upload != null && upload.ContentLength > 0)
+                {
+                    var fileName = Path.GetFileName(upload.FileName);
+                    var path = Path.Combine(Server.MapPath("~/App_Data/uploads"), fileName);
+                    upload.SaveAs(path);
+                }
+            }
             return View();
         }
 
