@@ -1,1 +1,4 @@
 *.cs diff=csharp
+src/SCP.Web/Content/* linguist-vendored
+src/SCP.Web/Scripts/* linguist-vendored
+src/SCP.Web/fonts/* linguist-vendored
